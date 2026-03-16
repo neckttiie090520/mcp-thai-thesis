@@ -127,6 +127,24 @@ Skills to install:
 Copy the skills/ folder to my ~/.claude/skills/ or equivalent location.
 ```
 
+### 🤖 OpenCode Agent System
+
+OpenCode has a powerful **hierarchical agent system** perfect for thesis workflows:
+
+| Feature | Description |
+|---------|-------------|
+| **Agent → Subagent** | Primary agents can delegate to specialized subagents |
+| **Model Selection** | Choose different models for different tasks (Haiku=fast, Sonnet=quality) |
+| **Permission Control** | Control what each agent can/can't do |
+| **Temperature** | Adjust creativity (0.0=precise, 1.0=creative) |
+
+**Why OpenCode?**
+- Use Haiku for fast tasks (search, planning)
+- Use Sonnet for quality tasks (writing, review)
+- Use Opus for complex reasoning (debugging)
+
+**Learn more:** [docs/OPENCODE-AGENTS.md](docs/OPENCODE-AGENTS.md)
+
 ### 📚 Citation Finder Workflow
 
 ```
@@ -572,6 +590,8 @@ Adding your university is straightforward -- see [docs/CONTRIBUTING.md](docs/CON
 | [Development Journey](docs/DEVELOPMENT-JOURNEY.md) | How this project was built |
 | [Roadmap](docs/ROADMAP.md) | Future development plans |
 | [Contributing](docs/CONTRIBUTING.md) | How to contribute |
+| [Use Cases](docs/USE-CASES.md) | Creative use cases for MCP Thai Thesis |
+| [OpenCode Agents](docs/OPENCODE-AGENTS.md) | OpenCode agent system & model selection |
 
 ---
 
@@ -603,6 +623,29 @@ MIT License -- see [LICENSE](LICENSE)
 - [OpenCode](https://opencode.ai) for the AI agent framework
 - [paper-search-mcp](https://github.com/openags/paper-search-mcp) for citation discovery capabilities
 - The Thai graduate student community for feedback and testing
+
+---
+
+## Inspiration & Related Projects
+
+This project was inspired by and builds upon excellent work from these repositories:
+
+| Project | URL | What We Learned |
+|---------|-----|-----------------|
+| **awesome-ai-research-writing** | [Leey21/awesome-ai-research-writing](https://github.com/Leey21/awesome-ai-research-writing) | High-quality prompts for English paper writing, LaTeX formatting, de-AI patterns (Chinese version) |
+| **claude-scholar** | [Galaxy-Dawn/claude-scholar](https://github.com/Galaxy-Dawn/claude-scholar) | Full agent ecosystem (32 skills, 14 agents), Zotero MCP integration, hooks automation |
+| **thesis-writer** | [ccam80/thesis-writer](https://github.com/ccam80/thesis-writer) | Plan-driven thesis workflow, document-planner → writer → reviewer chain |
+| **opendraft** | [federicodeponte/opendraft](https://github.com/federicodeponte/opendraft) | 19-agent pipeline for thesis generation, verified citations with CrossRef/OpenAlex |
+| **academic-ai-prompt** | [bohyy/academic-ai-prompt](https://github.com/bohyy/academic-ai-prompt) | 89+ Chinese prompts for thesis workflow (topic selection → paper finding → literature review → writing) |
+
+### What Makes MCP Thai Thesis Different
+
+While the above projects focus on English/paper writing, MCP Thai Thesis is specifically designed for:
+- **Thai language** with proper typography (ราชบัณฑิตยสถาน standards)
+- **Thai universities** (จุฬา, เกษตร, KMUTT, มช) with university-specific formatting
+- **APA นาม-ปี** with พ.ศ./ค.ศ. year system
+- **ISO 29110** documents for software engineering theses
+- **De-AI detection** for Thai text (30+ patterns)
 
 ---
 
