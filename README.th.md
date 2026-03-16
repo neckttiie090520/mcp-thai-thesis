@@ -1,5 +1,9 @@
 # MCP Thai Thesis
 
+<p align="center">
+  <img src="docs/hero.png" alt="MCP Thai Thesis" width="100%" />
+</p>
+
 **เครื่องมือ MCP Server + AI Skills สำหรับเขียนวิทยานิพนธ์ภาษาไทยระดับบัณฑิตศึกษา**
 
 Open-source Model Context Protocol (MCP) server และ skill ecosystem สำหรับการเขียนวิทยานิพนธ์ภาษาไทยระดับบัณฑิตศึกษา สร้างจากประสบการณ์การเขียนวิทยานิพนธ์จริง และผ่านการทดสอบกับมาตรฐานการส่งมหาวิทยาลัยจริง

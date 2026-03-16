@@ -1,5 +1,9 @@
 # MCP Thai Thesis
 
+<p align="center">
+  <img src="docs/hero.png" alt="MCP Thai Thesis" width="100%" />
+</p>
+
 **Open-source MCP server + AI skills สำหรับเขียนวิทยานิพนธ์ภาษาไทยระดับบัณฑิตศึกษา**
 
 An open-source Model Context Protocol (MCP) server and skill ecosystem for Thai graduate thesis writing. Built from real thesis production experience, tested against actual university submission standards.
