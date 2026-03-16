@@ -1,0 +1,89 @@
+# University Configuration for Thai Thesis
+
+universities:
+  chulalongkorn:
+    name: "จุฬาลงกรณ์มหาวิทยาลัย"
+    name_en: "Chulalongkorn University"
+    citation_style: "apa"
+    year_system: "phc"
+    format_rules:
+      font: "TH Sarabun New"
+      font_size: 16
+      line_spacing: 1.5
+      margin:
+        top: 1.5
+        bottom: 1
+        left: 1.5
+        right: 1
+    chapter_naming: "บทที่"
+    status: "verified"
+
+  kasetsart:
+    name: "มหาวิทยาลัยเกษตรศาสตร์"
+    name_en: "Kasetsart University"
+    citation_style: "apa"
+    year_system: "phc"
+    format_rules:
+      font: "TH Sarabun New"
+      font_size: 16
+      line_spacing: 1.5
+      margin:
+        top: 1
+        bottom: 1
+        left: 1.5
+        right: 1
+    chapter_naming: "บทที่"
+    status: "verified"
+
+  kmutt:
+    name: "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง"
+    name_en: "King Mongkut's Institute of Technology Ladkrabang"
+    citation_style: "apa"
+    year_system: "phc"
+    format_rules:
+      font: "TH Sarabun New"
+      font_size: 16
+      line_spacing: 1.5
+      margin:
+        top: 1
+        bottom: 1
+        left: 1.5
+        right: 1
+    chapter_naming: "บทที่"
+    status: "verified"
+
+  chiangmai:
+    name: "มหาวิทยาลัยเชียงใหม่"
+    name_en: "Chiang Mai University"
+    citation_style: "apa"
+    year_system: "phc"
+    format_rules:
+      font: "TH Sarabun New"
+      font_size: 16
+      line_spacing: 1.5
+      margin:
+        top: 1
+        bottom: 1
+        left: 1.5
+        right: 1
+    chapter_naming: "บทที่"
+    status: "verified"
+
+  generic:
+    name: "Generic Thai University"
+    name_en: "Generic Template"
+    citation_style: "apa"
+    year_system: "phc"
+    format_rules:
+      font: "TH Sarabun New"
+      font_size: 16
+      line_spacing: 1.5
+      margin:
+        top: 1
+        bottom: 1
+        left: 1.5
+        right: 1
+    chapter_naming: "บทที่"
+    status: "baseline"
+
+default_university: "generic"

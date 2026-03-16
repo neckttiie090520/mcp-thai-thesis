@@ -1,0 +1,48 @@
+{
+  "name": "mcp-thai-thesis",
+  "version": "1.0.0",
+  "description": "MCP Server for Thai Thesis AI Workflow — 11 tools and 9 resources for Thai academic writing, de-AI processing, APA นาม-ปี citations, ISO 29110 documents, quality scoring, and multi-university formatting.",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node --esm src/server.ts",
+    "watch": "tsc --watch",
+    "clean": "rimraf dist",
+    "rebuild": "npm run clean && npm run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.2",
+    "rimraf": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
+  ],
+  "keywords": [
+    "mcp",
+    "thai-thesis",
+    "academic-writing",
+    "iso29110",
+    "de-ai",
+    "apa-citation",
+    "university",
+    "thailand"
+  ],
+  "author": "nextzus",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nextzus/mcp-thai-thesis"
+  }
+}

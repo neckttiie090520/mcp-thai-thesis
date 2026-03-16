@@ -1,0 +1,86 @@
+{
+  "deai_patterns": {
+    "thai": {
+      "tier1": [
+        {"pattern": "ในยุคดิจิทัล", "replacement": "ในปัจจุบัน, ทุกวันนี้", "category": "marketing"},
+        {"pattern": "ด้วยการ", "replacement": "โดย, ด้วยวิธี", "category": "connector"},
+        {"pattern": "โดยการ", "replacement": "ด้วย, ด้วยวิธี", "category": "connector"},
+        {"pattern": "มีความจำเป็น", "replacement": "ต้อง, จำเป็นต้อง", "category": "formal"},
+        {"pattern": "มีความสำคัญ", "replacement": "สำคัญ", "category": "formal"},
+        {"pattern": "เป็นสิ่งจำเป็น", "replacement": "จำเป็น", "category": "formal"},
+        {"pattern": "มีบทบาทสำคัญ", "replacement": "สำคัญต่อ", "category": "formal"},
+        {"pattern": "ประสบความสำเร็จ", "replacement": "ได้ผล, สำเร็จ", "category": "marketing"},
+        {"pattern": "ผลักดันให้", "replacement": "ทำให้, กระตุ้นให้", "category": "marketing"},
+        {"pattern": "ยกระดับ", "replacement": "พัฒนา, ปรับปรุง", "category": "marketing"}
+      ],
+      "tier2": [
+        {"pattern": "ในปัจจุบันนี้", "replacement": "ทุกวันนี้, เดี๋ยวนี้", "category": "filler"},
+        {"pattern": "ดังนั้นแล้ว", "replacement": "ดังนั้น, ฉะนั้น", "category": "filler"},
+        {"pattern": "อย่างไรก็ตาม", "replacement": "แต่, ทว่า", "category": "filler"},
+        {"pattern": "นอกจากนี้ยัง", "replacement": "นอกจากนี้, อีกทั้ง", "category": "filler"},
+        {"pattern": "เป็นที่ทราบกันดีว่า", "replacement": "ทราบว่า", "category": "filler"},
+        {"pattern": "ไม่ต้องสงสัยเลยว่า", "replacement": "แน่นอนว่า", "category": "filler"},
+        {"pattern": "เป็นเรื่องที่น่าสนใจว่า", "replacement": "น่าสนใจว่า", "category": "filler"},
+        {"pattern": "มีความเป็นมาอันยาวนาน", "replacement": "มีประวัติยาวนาน", "category": "formal"},
+        {"pattern": "ได้รับการยอมรับ", "replacement": "เป็นที่ยอมรับ", "category": "formal"},
+        {"pattern": "มีความแตกต่าง", "replacement": "ต่าง, แตกต่าง", "category": "formal"}
+      ],
+      "tier3": [
+        {"pattern": "ในบทความนี้ เราจะ", "replacement": "บทความนี้อธิบาย", "category": "phrase"},
+        {"pattern": "สรุปได้ว่า", "replacement": "สรุป, กล่าวโดยสรุป", "category": "phrase"},
+        {"pattern": "เพื่อให้เข้าใจ", "replacement": "เพื่อความเข้าใจ", "category": "phrase"},
+        {"pattern": "จะเห็นได้ว่า", "replacement": "[ตัดออกหรือเขียนใหม่]", "category": "phrase"}
+      ]
+    },
+    "english": {
+      "tier1": {
+        "description": "Words appearing 50-700x more frequently in AI text",
+        "words": [
+          {"word": "delve", "alternatives": ["explore", "examine", "investigate"]},
+          {"word": "tapestry", "alternatives": ["mix", "blend", "combination"]},
+          {"word": "leverage", "alternatives": ["use", "utilize", "apply"]},
+          {"word": "multifaceted", "alternatives": ["complex", "many-sided"]},
+          {"word": "paramount", "alternatives": ["crucial", "essential", "vital"]},
+          {"word": "pivotal", "alternatives": ["key", "central", "critical"]},
+          {"word": "nuanced", "alternatives": ["subtle", "complex"]},
+          {"word": "intricate", "alternatives": ["complex", "detailed"]},
+          {"word": "holistic", "alternatives": ["comprehensive", "complete"]}
+        ]
+      },
+      "tier2": {
+        "description": "Words appearing 20-50x more frequently in AI text",
+        "words": [
+          {"word": "robust", "alternatives": ["strong", "reliable", "solid"]},
+          {"word": "comprehensive", "alternatives": ["complete", "thorough", "full"]},
+          {"word": "foster", "alternatives": ["encourage", "promote", "support"]},
+          {"word": "bolster", "alternatives": ["strengthen", "support"]},
+          {"word": "facilitate", "alternatives": ["enable", "help", "assist"]},
+          {"word": "elucidate", "alternatives": ["explain", "clarify"]},
+          {"word": "profound", "alternatives": ["deep", "significant"]},
+          {"word": "meticulous", "alternatives": ["careful", "thorough"]},
+          {"word": "crucial", "alternatives": ["important", "essential"]}
+        ]
+      },
+      "tier3": {
+        "description": "Words appearing 10-20x more frequently in AI text",
+        "words": [
+          {"word": "underscore", "alternatives": ["emphasize", "highlight"]},
+          {"word": "unveil", "alternatives": ["reveal", "show"]},
+          {"word": "culminate", "alternatives": ["end", "result"]},
+          {"word": "accentuate", "alternatives": ["emphasize", "highlight"]},
+          {"word": "ameliorate", "alternatives": ["improve", "better"]},
+          {"word": "perpetuate", "alternatives": ["continue", "maintain"]},
+          {"word": "scrutinize", "alternatives": ["examine", "study"]},
+          {"word": "traverse", "alternatives": ["cross", "travel"]},
+          {"word": "endeavor", "alternatives": ["effort", "attempt"]}
+        ]
+      }
+    }
+  },
+  "detection_thresholds": {
+    "burstiness_cv_min": 20,
+    "pattern_count_warning": 5,
+    "pattern_count_critical": 10
+  },
+  "version": "1.0.0"
+}
