@@ -587,20 +587,53 @@ Adding your university is straightforward -- see [docs/CONTRIBUTING.md](docs/CON
 
 ## Documentation
 
+### Core Docs
+
 | Document | Description |
 |----------|-------------|
 | [Getting Started](docs/GETTING-STARTED.md) | Installation, configuration, first run |
 | [Architecture](docs/ARCHITECTURE.md) | System design, component relationships |
 | [Workflow](docs/WORKFLOW.md) | Pipeline workflows with diagrams |
-| [Capabilities](docs/CAPABILITIES.md) | Complete tool and skill reference |
+
+### Tools & Skills
+
+| Document | Description |
+|----------|-------------|
+| [Capabilities](docs/CAPABILITIES.md) | Complete tool (11) and skill (7) reference |
 | [Skills Guide](docs/SKILLS-GUIDE.md) | How each skill works |
+| [Commands](commands/) | Slash commands reference (9 commands) |
+
+### Quality & Compliance
+
+| Document | Description |
+|----------|-------------|
 | [ISO 29110 Report](docs/ISO29110-REPORT.md) | ISO compliance analysis |
 | [Examples](docs/EXAMPLES.md) | Real output examples |
+
+### Development & Contribution
+
+| Document | Description |
+|----------|-------------|
 | [Development Journey](docs/DEVELOPMENT-JOURNEY.md) | How this project was built |
 | [Roadmap](docs/ROADMAP.md) | Future development plans |
 | [Contributing](docs/CONTRIBUTING.md) | How to contribute |
-| [Use Cases](docs/USE-CASES.md) | Creative use cases for MCP Thai Thesis |
-| [OpenCode Agents](docs/OPENCODE-AGENTS.md) | OpenCode agent system & model selection |
+
+### Advanced
+
+| Document | Description |
+|----------|-------------|
+| [Use Cases](docs/USE-CASES.md) | 10+ creative use cases |
+| [OpenCode Agents](docs/OPENCODE-AGENTS.md) | Agent system & model selection |
+
+### Quick Reference
+
+| Type | Files |
+|------|-------|
+| **Skills** | [skills/](skills/) — 7 skills (thai-thesis-writing, documentation-writer, thai-de-ai, thai-citation-manager, iso29110-docs, thesis-quality-gate, thesis-orchestrator) |
+| **Commands** | [commands/](commands/) — 9 slash commands (thesis-init, thesis-chapter, thesis-audit, thesis-review, thesis-deai, thesis-score, thesis-format, thesis-rewrite, iso-docs) |
+| **Agents** | [agents/](agents/) — thesis-reviewer agent |
+| **Templates** | [mcp-server/templates/](mcp-server/templates/) — Universities (5), ISO (6), De-AI patterns |
+| **MCP Server** | [mcp-server/src/](mcp-server/src/) — TypeScript source code |
 
 ---
 
