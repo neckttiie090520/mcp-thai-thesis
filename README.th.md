@@ -10,6 +10,12 @@ Open-source Model Context Protocol (MCP) server และ skill ecosystem สำ
 
 ---
 
+<p align="center">
+  <img src="docs/mcp-diagram.png" alt="How MCP Works" width="100%" />
+</p>
+
+---
+
 ## เครื่องมือนี้ทำอะไร
 
 MCP Thai Thesis เป็นชุดเครื่องมือ AI ที่ช่วยนักศึกษ์บัณฑิตศึกษาไทย **ตรวจสอบ ทบทวน และปรับปรุง** การเขียนวิทยานิพนธ์ ไม่ใช่ตัวสร้างวิทยานิพนธ์ -- แต่เป็น pipeline ประกันคุณภาพที่ทำงานร่วมกับการเขียนของมนุษย์
