@@ -24,7 +24,7 @@ Think of it this way: you write your thesis, then run it through this system. Th
 | **De-AI** | ตรวจจับ 30+ AI patterns ไทย/อังกฤษ, burstiness analysis, register scoring, typography check, แก้ไข/เขียนใหม่ |
 | **Quality** | ให้คะแนน 6 มิติ (100 คะแนน), audit เต็มรูปแบบ, quality gate 8 ขั้นตอน, review จากมุมมอง advisor/committee |
 | **Consistency** | ตรวจตัวเลข/ศัพท์/ข้อเท็จจริง/versions/dates ข้ามเอกสาร |
-| **ISO 29110** | สร้างเอกสาร 10 ประเภท (project-plan, srs, sdd, test-plan, test-record, traceability, change-request, progress, config-plan, user-manual) แบบ bilingual |
+| **ISO 29110** | ตรวจสอบความสอดคล้อง 10 ประเภท (project-plan, srs, sdd, test-plan, test-record, traceability, change-request, progress, config-plan, user-manual), ให้คำแนะนำ bilingual |
 | **Format** | ตรวจ Thai typography (ราชบัณฑิตยสถาน), register, รูปแบบตามมหาวิทยาลัย (5 มหาวิทยาลัย) |
 | **Structure** | วิเคราะห์โครงสร้างวิทยานิพนธ์, สร้าง traceability matrix, ตรวจ chapter organization |
 | **Thesis Init** | สร้างโปรเจกต์ใหม่, กำหนดมหาวิทยาลัย, ใส่ชื่อผู้วิจัย/อาจารย์ที่ปรึกษา/หัวข้อ |
@@ -289,7 +289,9 @@ Skills are detailed instruction sets that guide AI agents through complex thesis
 
 ### Citation Finder Integration
 
-การหา citation ที่ขาดหายไปเป็นปัญหาสำคัญ ระบบนี้แนะนำให้ใช้ร่วมกับ **[paper-search-mcp](https://github.com/openags/paper-search-mcp)** ซึ่งเป็น MCP server สำหรับค้นหางานวิจัยจากฐานข้อมูลต่างๆ:
+การหา citation ที่ขาดหายไปเป็นปัญหาสำคัญ ระบบนี้แนะนำให้ใช้ร่วมกับ **[paper-search-mcp](https://github.com/openags/paper-search-mcp)** ซึ่งเป็น MCP server สำหรับค้นหางานวิจัยจากฐานข้อมูลต่างๆ
+
+> **ดู workflow ละเอียด:** [Use Cases - Citation Finder](docs/USE-CASES.md#2-workflow-การหา-citation-ที่ขาด)
 
 | Database | Use Case |
 |----------|----------|
@@ -624,6 +626,7 @@ Adding your university is straightforward -- see [docs/CONTRIBUTING.md](docs/CON
 |----------|-------------|
 | [Use Cases](docs/USE-CASES.md) | 10+ creative use cases |
 | [OpenCode Agents](docs/OPENCODE-AGENTS.md) | Agent system & model selection |
+| [Troubleshooting](docs/TROUBLESHOOTING.md) | Common issues and solutions |
 
 ### Quick Reference
 
