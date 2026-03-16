@@ -17,18 +17,27 @@ MCP Thai Thesis is a set of AI-powered tools that help Thai graduate students **
 Think of it this way: you write your thesis, then run it through this system. The system checks your citations, detects AI-writing patterns, validates ISO 29110 compliance, scores your chapters, and reports back what needs fixing.
 
 **เครื่องมือนี้ทำอะไร:**
-- ตรวจสอบรูปแบบการอ้างอิง APA นาม-ปี (พ.ศ./ค.ศ.)
-- ตรวจจับลายนิ้วมือ AI ในงานเขียนภาษาไทยและอังกฤษ (30+ patterns)
-- ตรวจสอบความสอดคล้องของข้อมูลข้ามเอกสาร
-- สร้างเอกสาร ISO/IEC 29110 แบบสองภาษา (10 ประเภท)
-- ให้คะแนนวิทยานิพนธ์ 6 มิติ (100 คะแนน)
-- ตรวจสอบ Thai typography, register, and formatting
+
+| หมวด | สิ่งที่ทำได้ |
+|-------|-------------|
+| **Citation** | ตรวจสอบ APA นาม-ปี, สร้าง bibliography, audit ความสอดคล้อง, รองรับ พ.ศ./ค.ศ., ผู้แต่งไทย/อังกฤษ, ตรวจ metadata |
+| **De-AI** | ตรวจจับ 30+ AI patterns ไทย/อังกฤษ, burstiness analysis, register scoring, typography check, แก้ไข/เขียนใหม่ |
+| **Quality** | ให้คะแนน 6 มิติ (100 คะแนน), audit เต็มรูปแบบ, quality gate 8 ขั้นตอน, review จากมุมมอง advisor/committee |
+| **Consistency** | ตรวจตัวเลข/ศัพท์/ข้อเท็จจริง/versions/dates ข้ามเอกสาร |
+| **ISO 29110** | สร้างเอกสาร 10 ประเภท (project-plan, srs, sdd, test-plan, test-record, traceability, change-request, progress, config-plan, user-manual) แบบ bilingual |
+| **Format** | ตรวจ Thai typography (ราชบัณฑิตยสถาน), register, รูปแบบตามมหาวิทยาลัย (5 มหาวิทยาลัย) |
+| **Structure** | วิเคราะห์โครงสร้างวิทยานิพนธ์, สร้าง traceability matrix, ตรวจ chapter organization |
+| **Thesis Init** | สร้างโปรเจกต์ใหม่, กำหนดมหาวิทยาลัย, ใส่ชื่อผู้วิจัย/อาจารย์ที่ปรึกษา/หัวข้อ |
+
+**รวม:** ตรวจสอบ → ทบทวน → ให้คะแนน → รายงานปัญหา → แนะนำการแก้ไข
 
 **เครื่องมือนี้ไม่ได้ทำอะไร:**
 - ไม่เขียนวิทยานิพนธ์ให้คุณ
 - ไม่สร้างข้อมูลวิจัยปลอม
-- ไม่สร้าง citation ที่ไม่มีอยู่จริง
+- ไม่สร้าง citation ที่ไม่มีอยู่จริง (ต้องหาเองด้วย paper-search-mcp)
 - ไม่รับประกันว่าจะผ่านการสอบป้องกัน
+- ไม่ตรวจ plagiarism
+- ไม่เป็นทนายความด้านลิขสิทธิ์
 
 ---
 
