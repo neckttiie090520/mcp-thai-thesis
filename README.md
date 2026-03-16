@@ -56,7 +56,7 @@ After building these tools for personal use and seeing them catch hundreds of is
 ### Prerequisites
 
 - **Node.js** >= 18.0.0
-- **OpenCode** CLI ([opencode.ai](https://opencode.ai)) or any MCP-compatible client
+- **OpenCode** CLI ([opencode.ai](https://opencode.ai) | [GitHub](https://github.com/anomalyco/opencode)) or any MCP-compatible client
 - Your thesis content in markdown or text format
 
 ### Install
@@ -665,7 +665,7 @@ MIT License -- see [LICENSE](LICENSE)
 - ราชบัณฑิตยสถาน for Thai language standards
 - Thai universities for thesis formatting guidelines
 - [Model Context Protocol](https://modelcontextprotocol.io/) for the open standard
-- [OpenCode](https://opencode.ai) for the AI agent framework
+- [OpenCode](https://opencode.ai) ([GitHub](https://github.com/anomalyco/opencode)) for the AI agent framework
 - [paper-search-mcp](https://github.com/openags/paper-search-mcp) for citation discovery capabilities
 - The Thai graduate student community for feedback and testing
 

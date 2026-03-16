@@ -48,7 +48,7 @@ MCP Thai Thesis เป็นชุดเครื่องมือ AI ที่
 ### ความต้องการ
 
 - **Node.js** >= 18.0.0
-- **OpenCode** CLI ([opencode.ai](https://opencode.ai)) หรือ MCP client อื่นๆ
+- **OpenCode** CLI ([opencode.ai](https://opencode.ai) | [GitHub](https://github.com/anomalyco/opencode)) หรือ MCP client อื่นๆ
 - เนื้อหาวิทยานิพนธ์ในรูปแบบ markdown หรือ text
 
 ### ติดตั้ง
@@ -378,3 +378,14 @@ MIT License -- see [LICENSE](LICENSE)
 ---
 
 **สร้างจากประสบการณ์เขียนวิทยานิพนธ์จริง ผ่านการทดสอบกับมาตรฐานมหาวิทยาลัยจริง**
+
+---
+
+## เครื่องมือที่ขอบคุณ
+
+- ราชบัณฑิตยสถาน for Thai language standards
+- มหาวิทยาลัยไทย for thesis formatting guidelines
+- [Model Context Protocol](https://modelcontextprotocol.io/) for the open standard
+- [OpenCode](https://opencode.ai) ([GitHub](https://github.com/anomalyco/opencode)) for the AI agent framework
+- [paper-search-mcp](https://github.com/openags/paper-search-mcp) for citation discovery
+- นักศึกษ์บัณฑิตศึกษาไทย for feedback and testing
