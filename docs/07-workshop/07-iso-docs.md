@@ -93,8 +93,8 @@
   "project_name": "ClutchG PC Optimizer",
   "version": "1.0",
   "date": "16 มีนาคม 2569",
-  "author": "นายธีรภัทร รักษวงศ์",
-  "approver": "ดร.ปริญญา สุวรรณศรีคำ"
+  "author": "ชื่อผู้เขียน",
+  "approver": "ชื่อผู้อนุมัติ"
 }
 ```
 
@@ -161,7 +161,7 @@
 ## ใช้ MCP Tool โดยตรง
 
 ```
-iso_document document_type=srs language=bilingual project_info="{\"project_name\": \"ClutchG\", \"version\": \"1.0\", \"date\": \"16 มีนาคม 2569\", \"author\": \"ธีรภัทร\", \"approver\": \"ดร.ปริญญา\"}"
+iso_document document_type=srs language=bilingual project_info="{\"project_name\": \"ClutchG\", \"version\": \"1.0\", \"date\": \"16 มีนาคม 2569\", \"author\": \"ชื่อผู้เขียน\", \"approver\": \"ชื่อผู้อนุมัติ\"}"
 ```
 
 ---

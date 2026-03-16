@@ -41,7 +41,7 @@
 พิมพ์ใน OpenCode:
 
 ```
-/thesis-init university=chiangmai title="ระบบลดความหน่วงของ Windows สำหรับเกม" author="นายธีรภัทร รักษวงศ์" advisor="ดร.ปริญญา สุวรรณศรีคำ"
+/thesis-init university=chiangmai title="ระบบลดความหน่วงของ Windows สำหรับเกม" author="ชื่อผู้วิจัย" advisor="ชื่ออาจารย์ที่ปรึกษา"
 ```
 
 ### Step 2: รอผลลัพธ์
@@ -53,8 +53,8 @@
   "project_id": "thesis-2026-001",
   "university": "chiangmai",
   "title": "ระบบลดความหน่วงของ Windows สำหรับเกม",
-  "author": "นายธีรภัทร รักษวงศ์",
-  "advisor": "ดร.ปริญญา สุวรรณศรีคำ",
+  "author": "ชื่อผู้วิจัย",
+  "advisor": "ชื่ออาจารย์ที่ปรึกษา",
   "chapter_plan": {
     "1": "บทนำ",
     "2": "ทฤษฎีและงานวิจัยที่เกี่ยวข้อง",
@@ -95,7 +95,7 @@
 นอกจาก /thesis-init ยังสามารถเรียก MCP Tool โดยตรงได้:
 
 ```
-thai_thesis_init university=chiangmai title="ระบบลดความหน่วงของ Windows สำหรับเกม" author="นายธีรภัทร รักษวงศ์"
+thai_thesis_init university=chiangmai title="ระบบลดความหน่วงของ Windows สำหรับเกม" author="ชื่อผู้วิจัย"
 ```
 
 ---
