@@ -60,7 +60,7 @@ After building these tools for personal use and seeing them catch hundreds of is
 ### Prerequisites
 
 - **Node.js** >= 18.0.0
-- **OpenCode** CLI ([opencode.ai](https://opencode.ai) | [GitHub](https://github.com/anomalyco/opencode)) or any MCP-compatible client
+- **OpenCode** CLI ([opencode.ai](https://opencode.ai) | [GitHub](https://github.com/anomalyco/opencode))
 - Your thesis content in markdown or text format
 
 ### Install
@@ -74,7 +74,7 @@ npm run build
 
 ### Configure Your MCP Client
 
-Add to your `opencode.json` (or equivalent MCP config):
+Add to your `opencode.json`:
 
 ```json
 {
@@ -93,9 +93,52 @@ Add to your `opencode.json` (or equivalent MCP config):
 /thesis-init --university chiangmai --author "ชื่อ นามสกุล" --title "ชื่อวิทยานิพนธ์"
 ```
 
-This returns your university's formatting profile (fonts, margins, chapter naming conventions, year system) so you know exactly what standards to follow.
+> **Full setup guide:** [docs/01-getting-started/GETTING-STARTED.md](docs/01-getting-started/GETTING-STARTED.md)
 
-> **Full setup guide:** [docs/GETTING-STARTED.md](docs/GETTING-STARTED.md)
+---
+
+## 🎓 Workshop: Learn by Doing
+
+**เรียนรู้แบบจับมือทำ — ตั้งแต่ติดตั้งจนส่งวิทยานิพนธ์**
+
+### 10 Modules
+
+| # | Module | ไฟล์ |
+|---|--------|-------|
+| 1 | Setup | [07-workshop/01-setup.md](docs/07-workshop/01-setup.md) |
+| 2 | Init Project | [07-workshop/02-init-project.md](docs/07-workshop/02-init-project.md) |
+| 3 | Chapter Writing | [07-workshop/03-chapter-writing.md](docs/07-workshop/03-chapter-writing.md) |
+| 4 | De-AI Check | [07-workshop/04-deai-check.md](docs/07-workshop/04-deai-check.md) |
+| 5 | Citation | [07-workshop/05-citation.md](docs/07-workshop/05-citation.md) |
+| 6 | Review & Score | [07-workshop/06-review-score.md](docs/07-workshop/06-review-score.md) |
+| 7 | ISO Docs | [07-workshop/07-iso-docs.md](docs/07-workshop/07-iso-docs.md) |
+| 8 | Consistency | [07-workshop/08-consistency.md](docs/07-workshop/08-consistency.md) |
+| 9 | Audit | [07-workshop/09-audit.md](docs/07-workshop/09-audit.md) |
+| 10 | Final Check | [07-workshop/10-final-check.md](docs/07-workshop/10-final-check.md) |
+
+### Workshop Overview
+
+→ [07-workshop/README.md](docs/07-workshop/README.md)
+
+---
+
+## 📂 Documentation Structure
+
+```
+docs/
+├── 01-getting-started/     ← เริ่มต้น
+├── 02-concepts/            ← เข้าใจระบบ
+├── 03-tools/               ← เครื่องมือ
+├── 04-skills/              ← Skills
+├── 05-prompts/             ← แม่แบบ Prompt
+├── 06-best-practices/       ← แนวปฏิบัติ
+├── 07-workshop/             ← 🎓 สอนทำทีละขั้นตอน
+├── 08-examples/            ← ตัวอย่าง
+├── 09-reference/           ← อ้างอิง/แก้ปัญหา
+└── 10-meta/                ← เกี่ยวกับโปรเจค
+```
+
+> **ดูความสัมพันธ์:** [02-concepts/DOCS-RELATIONSHIP.md](docs/02-concepts/DOCS-RELATIONSHIP.md)
 
 ---
 
@@ -156,7 +199,7 @@ OpenCode has a powerful **hierarchical agent system** perfect for thesis workflo
 - Use Sonnet for quality tasks (writing, review)
 - Use Opus for complex reasoning (debugging)
 
-**Learn more:** [docs/OPENCODE-AGENTS.md](docs/OPENCODE-AGENTS.md)
+**Learn more:** [docs/09-reference/OPENCODE-AGENTS.md](docs/09-reference/OPENCODE-AGENTS.md)
 
 ### 📚 Citation Finder Workflow
 
@@ -295,7 +338,7 @@ Skills are detailed instruction sets that guide AI agents through complex thesis
 
 การหา citation ที่ขาดหายไปเป็นปัญหาสำคัญ ระบบนี้แนะนำให้ใช้ร่วมกับ **[paper-search-mcp](https://github.com/openags/paper-search-mcp)** ซึ่งเป็น MCP server สำหรับค้นหางานวิจัยจากฐานข้อมูลต่างๆ
 
-> **ดู workflow ละเอียด:** [Use Cases - Citation Finder](docs/USE-CASES.md#2-workflow-การหา-citation-ที่ขาด)
+> **ดู workflow ละเอียด:** [Use Cases - Citation Finder](docs/08-examples/USE-CASES.md#2-workflow-การหา-citation-ที่ขาด)
 
 | Database | Use Case |
 |----------|----------|
@@ -375,7 +418,7 @@ The system operates as a **verification pipeline**, not a content generator:
 
 **Step 5: You re-check** -- Run the tools again until everything passes.
 
-> **Detailed workflow guide:** [docs/WORKFLOW.md](docs/WORKFLOW.md)
+> **Detailed workflow guide:** [docs/02-concepts/WORKFLOW.md](docs/02-concepts/WORKFLOW.md)
 
 ---
 
@@ -409,7 +452,7 @@ Typography: 1 issue
 Recommendation: REWRITE needed - multiple AI signals detected
 ```
 
-> **More examples:** [docs/EXAMPLES.md](docs/EXAMPLES.md)
+> **More examples:** [docs/08-examples/EXAMPLES.md](docs/08-examples/EXAMPLES.md)
 
 ---
 
@@ -458,7 +501,7 @@ For software engineering theses, the system generates and validates **10 ISO/IEC
 
 Each document can be generated in Thai, English, or bilingual format. Templates follow ISO/IEC 29110-5-1-2 (Basic Profile for Very Small Entities).
 
-> **ISO 29110 accuracy report:** [docs/ISO29110-REPORT.md](docs/ISO29110-REPORT.md)
+> **ISO 29110 accuracy report:** [docs/10-meta/ISO29110-REPORT.md](docs/10-meta/ISO29110-REPORT.md)
 
 ---
 
@@ -591,7 +634,7 @@ mcp-thai-thesis/
 
 The system currently has profiles for 5 Thai universities. All share the same core formatting (TH Sarabun New 16pt, 1.5 line spacing, APA citations) but differ in chapter naming conventions and specific requirements. The `generic` profile works as a safe default.
 
-Adding your university is straightforward -- see [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
+Adding your university is straightforward -- see [docs/10-meta/CONTRIBUTING.md](docs/10-meta/CONTRIBUTING.md).
 
 ---
 
@@ -601,40 +644,40 @@ Adding your university is straightforward -- see [docs/CONTRIBUTING.md](docs/CON
 
 | Document | Description |
 |----------|-------------|
-| [Getting Started](docs/GETTING-STARTED.md) | Installation, configuration, first run |
-| [Architecture](docs/ARCHITECTURE.md) | System design, component relationships |
-| [Workflow](docs/WORKFLOW.md) | Pipeline workflows with diagrams |
+| [Getting Started](docs/01-getting-started/GETTING-STARTED.md) | Installation, configuration, first run |
+| [Architecture](docs/02-concepts/ARCHITECTURE.md) | System design, component relationships |
+| [Workflow](docs/02-concepts/WORKFLOW.md) | Pipeline workflows with diagrams |
 
 ### Tools & Skills
 
 | Document | Description |
 |----------|-------------|
-| [Capabilities](docs/CAPABILITIES.md) | Complete tool (11) and skill (7) reference |
-| [Skills Guide](docs/SKILLS-GUIDE.md) | How each skill works |
+| [Capabilities](docs/03-tools/CAPABILITIES.md) | Complete tool (11) and skill (7) reference |
+| [Skills Guide](docs/04-skills/SKILLS-GUIDE.md) | How each skill works |
 | [Commands](commands/) | Slash commands reference (9 commands) |
 
 ### Quality & Compliance
 
 | Document | Description |
 |----------|-------------|
-| [ISO 29110 Report](docs/ISO29110-REPORT.md) | ISO compliance analysis |
-| [Examples](docs/EXAMPLES.md) | Real output examples |
+| [ISO 29110 Report](docs/10-meta/ISO29110-REPORT.md) | ISO compliance analysis |
+| [Examples](docs/08-examples/EXAMPLES.md) | Real output examples |
 
 ### Development & Contribution
 
 | Document | Description |
 |----------|-------------|
-| [Development Journey](docs/DEVELOPMENT-JOURNEY.md) | How this project was built |
-| [Roadmap](docs/ROADMAP.md) | Future development plans |
-| [Contributing](docs/CONTRIBUTING.md) | How to contribute |
+| [Development Journey](docs/10-meta/DEVELOPMENT-JOURNEY.md) | How this project was built |
+| [Roadmap](docs/10-meta/ROADMAP.md) | Future development plans |
+| [Contributing](docs/10-meta/CONTRIBUTING.md) | How to contribute |
 
 ### Advanced
 
 | Document | Description |
 |----------|-------------|
-| [Use Cases](docs/USE-CASES.md) | 10+ creative use cases |
-| [OpenCode Agents](docs/OPENCODE-AGENTS.md) | Agent system & model selection |
-| [Troubleshooting](docs/TROUBLESHOOTING.md) | Common issues and solutions |
+| [Use Cases](docs/08-examples/USE-CASES.md) | 10+ creative use cases |
+| [OpenCode Agents](docs/09-reference/OPENCODE-AGENTS.md) | Agent system & model selection |
+| [Troubleshooting](docs/09-reference/TROUBLESHOOTING.md) | Common issues and solutions |
 
 ### Quick Reference
 
