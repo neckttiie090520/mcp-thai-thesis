@@ -138,6 +138,39 @@ Skills are detailed instruction sets that guide AI agents through complex thesis
 | มหาวิทยาลัยเชียงใหม่ | `chiangmai` | มช, cmu |
 | Generic Template | `generic` | ทั่วไป, default |
 
+### Citation Finder Integration
+
+การหา citation ที่ขาดหายไปเป็นปัญหาสำคัญ ระบบนี้แนะนำให้ใช้ร่วมกับ **[paper-search-mcp](https://github.com/openags/paper-search-mcp)** ซึ่งเป็น MCP server สำหรับค้นหางานวิจัยจากฐานข้อมูลต่างๆ:
+
+| Database | Use Case |
+|----------|----------|
+| **Semantic Scholar** | ค้นหาทั่วไป, ได้ citation count |
+| **arXiv** | preprint ใหม่ๆ |
+| **PubMed** | งานวิจัยด้านการแพทย์/ชีววิทยา |
+| **Google Scholar** | ค้นหางานวิจัยทั่วไป |
+| **CrossRef** | ค้นหาจาก DOI |
+| **bioRxiv/medRxiv** | preprint ด้านวิทยาศาสตร์สุขภาพ |
+
+**วิธีใช้ร่วมกัน:**
+
+1. ใช้ `thesis_consistency` หา citation ที่ขาด
+2. ใช้ paper-search-mcp ค้นหางานวิจัยที่ต้องการ
+3. ใช้ `thai_citation` สร้าง bibliography entry จาก metadata ที่ได้
+4. ใช้ `thai_citation` audit ตรวจสอบความสมบูรณ์
+
+**ตัวอย่าง:**
+
+```
+// 1. หาว่าขาด citation อะไร
+thai_citation(action="audit", cited_keys=["claypool2010", "gpower2021"])
+
+// 2. ค้นหาด้วย paper-search-mcp
+search_semantic(query="Claypool latency online games", max_results=3)
+
+// 3. สร้าง bibliography entry
+thai_citation(action="bibliography", sources=[{title: "...", authors: "...", year: 2023, doi: "..."}])
+```
+
 ---
 
 ## How It Works
@@ -446,6 +479,7 @@ MIT License -- see [LICENSE](LICENSE)
 - Thai universities for thesis formatting guidelines
 - [Model Context Protocol](https://modelcontextprotocol.io/) for the open standard
 - [OpenCode](https://opencode.ai) for the AI agent framework
+- [paper-search-mcp](https://github.com/openags/paper-search-mcp) for citation discovery capabilities
 - The Thai graduate student community for feedback and testing
 
 ---
