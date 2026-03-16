@@ -1,0 +1,303 @@
+# MCP Thai Thesis
+
+**เครื่องมือ MCP Server + AI Skills สำหรับเขียนวิทยานิพนธ์ภาษาไทยระดับบัณฑิตศึกษา**
+
+Open-source Model Context Protocol (MCP) server และ skill ecosystem สำหรับการเขียนวิทยานิพนธ์ภาษาไทยระดับบัณฑิตศึกษา สร้างจากประสบการณ์การเขียนวิทยานิพนธ์จริง และผ่านการทดสอบกับมาตรฐานการส่งมหาวิทยาลัยจริง
+
+---
+
+## เครื่องมือนี้ทำอะไร
+
+MCP Thai Thesis เป็นชุดเครื่องมือ AI ที่ช่วยนักศึกษ์บัณฑิตศึกษาไทย **ตรวจสอบ ทบทวน และปรับปรุง** การเขียนวิทยานิพนธ์ ไม่ใช่ตัวสร้างวิทยานิพนธ์ -- แต่เป็น pipeline ประกันคุณภาพที่ทำงานร่วมกับการเขียนของมนุษย์
+
+**เครื่องมือนี้ทำอะไร:**
+- ตรวจสอบรูปแบบการอ้างอิง APA นาม-ปี (พ.ศ./ค.ศ.)
+- ตรวจจับลายนิ้วมือ AI ในงานเขียนภาษาไทยและอังกฤษ (30+ patterns)
+- ตรวจสอบความสอดคล้องของข้อมูลข้ามเอกสาร
+- สร้างเอกสาร ISO/IEC 29110 แบบสองภาษา (10 ประเภท)
+- ให้คะแนนวิทยานิพนธ์ 6 มิติ (100 คะแนน)
+- ตรวจสอบ Thai typography, register, และ formatting
+
+**เครื่องมือนี้ไม่ได้ทำอะไร:**
+- ไม่เขียนวิทยานิพนธ์ให้คุณ
+- ไม่สร้างข้อมูลวิจัยปลอม
+- ไม่สร้าง citation ที่ไม่มีอยู่จริง
+- ไม่รับประกันว่าจะผ่านการสอบป้องกัน
+
+---
+
+## ทำไมถึงสร้างสิ่งนี้
+
+โปรเจกต์นี้เกิดจากปัญหาจริง ระหว่างเขียนวิทยานิพนธ์ปริญญาโท สาขาวิศวกรรมซอฟต์แวร์ มหาวิทยาลัยเชียงใหม่ ผู้พัฒนาพบว่าการเขียนวิทยานิพนธ์ภาษาไทยมีกฎเกณฑ์เข้มงวด (APA citations ในพุทธศักราช, ระดับภาษาที่เป็นทางการ, รูปแบบเฉพาะของแต่ละมหาวิทยาลัย, ความสอดคล้องกับ ISO 29110 สำหรับโปรเจกต์ซอฟต์แวร์) แต่มีเครื่องมือช่วยตรวจสอบความถูกต้องน้อยมาก
+
+หลังจากสร้างเครื่องมือเหล่านี้ใช้เองและพบว่าช่วยตรวจจับปัญหาได้หลายร้อยจุดใน 7 บทวิทยานิพนธ์ 6 ภาคผนวก และ 10 เอกสาร ISO ผู้พัฒนาจึงตัดสินใจเปิดให้ใช้งานฟรีเพื่อให้นักศึกษ์บัณฑิตศึกษาไทยคนอื่นๆ สามารถใช้ประโยชน์ได้
+
+---
+
+## เริ่มต้นใช้งาน
+
+### ความต้องการ
+
+- **Node.js** >= 18.0.0
+- **OpenCode** CLI ([opencode.ai](https://opencode.ai)) หรือ MCP client อื่นๆ
+- เนื้อหาวิทยานิพนธ์ในรูปแบบ markdown หรือ text
+
+### ติดตั้ง
+
+```bash
+git clone https://github.com/nextzus/mcp-thai-thesis.git
+cd mcp-thai-thesis/mcp-server
+npm install
+npm run build
+```
+
+### ตั้งค่า MCP Client
+
+เพิ่มใน `opencode.json` (หรือ config MCP ที่ใช้):
+
+```json
+{
+  "mcpServers": {
+    "thai-thesis": {
+      "command": "node",
+      "args": ["path/to/mcp-thai-thesis/mcp-server/dist/server.js"]
+    }
+  }
+}
+```
+
+### เริ่มใช้งาน
+
+```
+/thesis-init --university chiangmai --author "ชื่อ นามสกุล" --title "ชื่อวิทยานิพนธ์"
+```
+
+คำสั่งนี้จะคืนค่าโปรไฟล์รูปแบบของมหาวิทยาลัยที่เลือก (แบบอักษร, ขอบ, การตั้งชื่อบท, ระบบปี) เพื่อให้คุณรู้ว่าต้องปฏิบัติตามมาตรฐานใด
+
+> **คู่มือการติดตั้งฉบับเต็ม:** [docs/GETTING-STARTED.md](docs/GETTING-STARTED.md)
+
+---
+
+## Prompt สำหรับเริ่มใช้งาน (Copy & ใช้ได้เลย)
+
+### 🚀 ติดตั้ง MCP Server
+
+```
+ฉันต้องการตั้งค่า MCP Thai Thesis server กรุณาช่วย:
+1. Clone https://github.com/neckttiie090520/mcp-thai-thesis
+2. รัน npm install และ npm run build ในโฟลเดอร์ mcp-server
+3. เพิ่ม MCP server นี้ใน OpenCode/Claude Desktop config:
+
+{
+  "mcpServers": {
+    "thai-thesis": {
+      "command": "node",
+      "args": ["path/to/mcp-thai-thesis/mcp-server/dist/server.js"]
+    }
+  }
+}
+
+4. ตรวจสอบว่า server ทำงานได้โดยเรียก thai_thesis_init
+```
+
+### 📦 ติดตั้ง Skills
+
+```
+กรุณาติดตั้ง skills เหล่านี้ให้ AI agent จาก https://github.com/neckttiie090520/mcp-thai-thesis:
+
+Skills ที่ต้องการติดตั้ง:
+1. thai-thesis-writing - Workflow การเขียนวิทยานิพนธ์ตั้งแต่ต้นจนจบ
+2. documentation-writer - การสร้างงานเขียนภาษาไทยระดับวิชาการ
+3. thai-de-ai - ลบลายนิ้วมือ AI (30+ patterns)
+4. thai-citation-manager - การจัดการ citation และ bibliography
+5. iso29110-docs - การสร้างเอกสาร ISO 29110
+6. thesis-quality-gate - Checklist ก่อนส่งวิทยานิพนธ์
+7. thesis-orchestrator - การประสานงานหลาย agents
+
+คัดลอกโฟลเดอร์ skills/ ไปยัง ~/.claude/skills/ หรือตำแหน่งที่เหมาะสม
+```
+
+### 📚 Workflow การหา Citation ที่ขาด
+
+```
+ฉันต้องการหา citation ที่ขาดหายไปในวิทยานิพนธ์ กรุณาช่วย:
+
+1. ก่อนอื่น รัน thesis_consistency เพื่อหา citation ที่ขาดในวิทยานิพนธ์
+   - ตรวจสอบ: numbers, terminology, facts, versions, dates
+
+2. จากนั้นใช้ paper-search-mcp (https://github.com/openags/paper-search-mcp) เพื่อหางานวิจัยแต่ละชิ้นที่ขาด:
+   - search_semantic(query="หัวข้อ", max_results=5)
+   - search_arxiv(query="หัวข้อ", max_results=5)
+   - search_google_scholar(query="หัวข้อ", max_results=5)
+
+3. สุดท้าย ใช้ thai_citation เพื่อสร้าง bibliography entry แบบ APA:
+   thai_citation(action="bibliography", sources=[{title, authors, year, doi, venue}])
+```
+
+### ✍️ การใช้ Skill เฉพาะ
+
+**เริ่มโปรเจกต์วิทยานิพนธ์ใหม่:**
+```
+ใช้ thai-thesis-writing skill เพื่อช่วยเริ่มวิทยานิพนธ์ใหม่:
+- มหาวิทยาลัย: chiangmai (หรือ chulalongkorn/kasetsart/kmutt/generic)
+- ผู้เขียน: [ชื่อ-นามสกุล]
+- หัวข้อ: [ชื่อวิทยานิพนธ์]
+- อาจารย์ที่ปรึกษา: [ชื่ออาจารย์]
+- ระบบปี: phc (พ.ศ.) หรือ ce (ค.ศ.)
+```
+
+**ตรวจจับลายนิ้วมือ AI:**
+```
+ใช้ thai-deai skill เพื่อวิเคราะห์ข้อความนี้ว่ามีรูปแบบการเขียนของ AI หรือไม่:
+- ภาษา: thai (หรือ english/both)
+- โหมด: detect (หรือ edit/rewrite)
+- ข้อความ: [วางข้อความวิทยานิพนธ์ที่นี่]
+```
+
+**จัดการ citations:**
+```
+ใช้ thai-citation-manager skill เพื่อตรวจสอบ citations:
+- การดำเนินการ: audit
+- Citation keys: [รายการ citation keys ที่พบในข้อความ]
+- ระบบปี: phc (พ.ศ.) สำหรับมหาวิทยาลัยไทย
+```
+
+**สร้างเอกสาร ISO 29110:**
+```
+ใช้ iso29110-docs skill เพื่อสร้างเอกสาร ISO:
+- ประเภทเอกสาร: project-plan (หรือ srs/sdd/test-plan/test-record/traceability/change-request/progress/config-plan/user-manual)
+- ภาษา: bilingual (หรือ thai/english)
+- ข้อมูลโปรเจกต์: [รายละเอียดโปรเจกต์ของคุณ]
+```
+
+**ตรวจสอบความพร้อมก่อนส่ง:**
+```
+ใช้ thesis-quality-gate skill เพื่อตรวจสอบความพร้อมของวิทยานิพนธ์:
+- ขอบเขต: full (หรือ chapter/iso/consistency)
+- มหาวิทยาลัย: chiangmai
+```
+
+### 📖 Slash Commands
+
+```
+ใช้ slash commands เหล่านี้ใน OpenCode/Claude Code:
+
+/thesis-init --university chiangmai --author "ชื่อ นามสกุล" --title "ชื่อวิทยานิพนธ์"
+/thesis-chapter --chapter 1 --mode generate
+/thesis-audit --scope full
+/thesis-review --perspective advisor
+/thesis-deai --language thai --mode detect
+/thesis-score --chapter 1
+/thesis-format --university chiangmai
+/iso-docs --document-type srs
+```
+
+---
+
+## สิ่งที่คุณได้รับ
+
+### 11 MCP Tools
+
+| เครื่องมือ | สิ่งที่ทำ |
+|---|---|
+| `thai_thesis_init` | เริ่มต้นโปรเจกต์วิทยานิพนธ์ตามมหาวิทยาลัยที่เลือก |
+| `thai_thesis_chapter` | สร้างโครงสร้างบท ส่วน และแนวทางการเขียน |
+| `thai_deai` | ตรวจจับลายนิ้วมือ AI ด้วย 30+ patterns |
+| `thai_citation` | จัดรูปแบบ APA citations, สร้าง bibliography, ตรวจสอบความสอดคล้อง |
+| `thai_format` | ส่งคืนข้อกำหนดรูปแบบของมหาวิทยาลัย |
+| `iso_document` | สร้างเอกสาร ISO/IEC 29110 (10 ประเภท, สองภาษา) |
+| `thesis_review` | ทบทวนคุณภาพจากมุมมองอาจารย์ที่ปรึกษา/กรรมการ/ISO auditor |
+| `thesis_audit` | ตรวจสอบวิทยานิพนธ์เต็มรูปแบบ พร้อมคะแนน 6 มิติ |
+| `thesis_score` | ให้คะแนนอย่างรวดเร็ว (100 คะแนน, 6 มิติ) |
+| `thesis_consistency` | ตรวจสอบความสอดคล้องข้ามเอกสาร |
+| `thesis_traceability` | สร้าง traceability matrix สำหรับ requirements |
+
+### 7 AI Skills
+
+Skills คือชุดคำสั่งที่ช่วย AI agents ผ่าน workflow ที่ซับซ้อน:
+
+| Skill | หน้าที่ |
+|---|---|
+| `thai-thesis-writing` | Workflow การเขียนวิทยานิพนธ์ตั้งแต่ต้นจนจบ |
+| `documentation-writer` | การสร้างงานเขียนภาษาไทยระดับวิชาการพร้อม de-AI 30 patterns |
+| `thai-de-ai` | การประมวลผลหลังเขียนเพื่อลบสัญญาณการเขียนของ AI |
+| `thai-citation-manager` | การจัดการ citation APA และการตรวจสอบ bibliography |
+| `iso29110-docs` | การสร้างและตรวจสอบเอกสาร ISO/IEC 29110 |
+| `thesis-quality-gate` | Checklist 8 ขั้นตอนก่อนส่งวิทยานิพนธ์ |
+| `thesis-orchestrator` | การประสานงาน workflow หลาย agents |
+
+### 9 Slash Commands
+
+| Command | สิ่งที่ทำ |
+|---|---|
+| `/thesis-init` | เริ่มโปรเจกต์วิทยานิพนธ์ใหม่ |
+| `/thesis-chapter` | เขียนหรือแก้ไขบท |
+| `/thesis-audit` | ตรวจสอบคุณภาพเต็มรูปแบบ |
+| `/thesis-review` | ทบทวนจากหลายมุมมอง |
+| `/thesis-deai` | วิเคราะห์การลบลายนิ้วมือ AI |
+| `/thesis-score` | ให้คะแนนอย่างรวดเร็ว |
+| `/thesis-format` | ตรวจสอบรูปแบบมหาวิทยาลัย |
+| `/thesis-rewrite` | เขียนใหม่ทั้งโครงสร้างและภาษา |
+| `/iso-docs` | สร้างเอกสาร ISO |
+
+### 5 โปรไฟล์มหาวิทยาลัย
+
+| มหาวิทยาลัย | Key | ชื่ออื่นๆ |
+|---|---|---|
+| จุฬาลงกรณ์มหาวิทยาลัย | `chulalongkorn` | จุฬา, chula, cu |
+| มหาวิทยาลัยเกษตรศาสตร์ | `kasetsart` | เกษตร, มก, ku |
+| มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี | `kmutt` | มจธ, บางมด |
+| มหาวิทยาลัยเชียงใหม่ | `chiangmai` | มช, cmu |
+| Generic Template | `generic` | ทั่วไป, default |
+
+---
+
+## เอกสาร
+
+| เอกสาร | รายละเอียด |
+|---|---|
+| [Getting Started](docs/GETTING-STARTED.md) | การติดตั้งและการตั้งค่า |
+| [Architecture](docs/ARCHITECTURE.md) | การออกแบบระบบและความสัมพันธ์ของ components |
+| [Workflow](docs/WORKFLOW.md) | Pipeline workflows พร้อมแผนภาพ |
+| [Capabilities](docs/CAPABILITIES.md) | คู่มือเครื่องมือและ skills ฉบับเต็ม |
+| [Skills Guide](docs/SKILLS-GUIDE.md) | วิธีใช้แต่ละ skill |
+| [ISO 29110 Report](docs/ISO29110-REPORT.md) | การวิเคราะห์ความสอดคล้อง ISO |
+| [Examples](docs/EXAMPLES.md) | ตัวอย่างผลลัพธ์จริง |
+| [Development Journey](docs/DEVELOPMENT-JOURNEY.md) | เรื่องราวการพัฒนาโปรเจกต์ |
+| [Roadmap](docs/ROADMAP.md) | แผนการพัฒนาในอนาคต |
+| [Contributing](docs/CONTRIBUTING.md) | วิธีมีส่วนร่วม |
+
+---
+
+## พัฒนา
+
+```bash
+cd mcp-server
+npm install          # ติดตั้ง dependencies
+npm run build       # Compile TypeScript
+npm run typecheck   # ตรวจสอบ types เท่านั้น (เร็วกว่า)
+npm run watch       # โหมด watch สำหรับพัฒนา
+npm run clean       # ลบ build output
+npm run rebuild     # Clean + build
+```
+
+---
+
+## License
+
+MIT License -- see [LICENSE](LICENSE)
+
+---
+
+## เครื่องมือที่ขอบคุณ
+
+- ราชบัณฑิตยสถาน for Thai language standards
+- มหาวิทยาลัยไทย for thesis formatting guidelines
+- [Model Context Protocol](https://modelcontextprotocol.io/) for the open standard
+- [OpenCode](https://opencode.ai) for the AI agent framework
+- [paper-search-mcp](https://github.com/openags/paper-search-mcp) for citation discovery
+- นักศึกษ์บัณฑิตศึกษาไทย for feedback and testing
+
+---
+
+**สร้างจากประสบการณ์เขียนวิทยานิพนธ์จริง ผ่านการทดสอบกับมาตรฐานมหาวิทยาลัยจริง**
