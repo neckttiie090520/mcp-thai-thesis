@@ -20,6 +20,14 @@ OpenCode เป็น AI CLI ที่มีระบบ **Agent แบบลำ
 
 ---
 
+## OpenCode Agent Architecture
+
+<p align="center">
+  <img src="../../A sub-agent working concurrently..png" alt="OpenCode Agent Architecture" width="80%" />
+</p>
+
+---
+
 ## ประเภทของ Agent
 
 ### Primary Agent
