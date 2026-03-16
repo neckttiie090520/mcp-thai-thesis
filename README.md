@@ -14,12 +14,6 @@ An open-source Model Context Protocol (MCP) server and skill ecosystem for Thai 
 
 ---
 
-<p align="center">
-  <img src="docs/mcp-diagram.png" alt="How MCP Works" width="100%" />
-</p>
-
----
-
 ## What This Is
 
 MCP Thai Thesis is a set of AI-powered tools that help Thai graduate students **check, review, and improve** their thesis writing. It is not a thesis generator -- it is a quality assurance pipeline that works alongside human writing.
@@ -358,8 +352,12 @@ The system operates as a **verification pipeline**, not a content generator:
                  (issues, scores, fixes)
                               |
                               v
-                     You Fix Your Work
+                      You Fix Your Work
 ```
+
+<p align="center">
+  <img src="docs/mcp-diagram.png" alt="How MCP Works" width="100%" />
+</p>
 
 ### The Workflow in Practice
 
