@@ -82,6 +82,124 @@ This returns your university's formatting profile (fonts, margins, chapter namin
 
 ---
 
+## Quick Prompts (Copy & Use)
+
+Copy these prompts to get started quickly with your AI agent:
+
+### 🚀 Install MCP Server
+
+```
+I want to set up the MCP Thai Thesis server. Please:
+1. Clone https://github.com/neckttiie090520/mcp-thai-thesis
+2. Run npm install and npm run build in the mcp-server folder
+3. Add this MCP server to my OpenCode/Claude Desktop config:
+
+{
+  "mcpServers": {
+    "thai-thesis": {
+      "command": "node",
+      "args": ["path/to/mcp-thai-thesis/mcp-server/dist/server.js"]
+    }
+  }
+}
+
+4. Verify the server is running by calling thai_thesis_init
+```
+
+### 📦 Install Skills
+
+```
+Please install these skills for my AI agent from https://github.com/neckttiie090520/mcp-thai-thesis:
+
+Skills to install:
+1. thai-thesis-writing - End-to-end thesis drafting workflow
+2. documentation-writer - Thai academic prose generation
+3. thai-de-ai - Remove AI writing patterns (30+ patterns)
+4. thai-citation-manager - APA citation management
+5. iso29110-docs - ISO 29110 document creation
+6. thesis-quality-gate - Pre-submission checklist
+7. thesis-orchestrator - Multi-agent coordination
+
+Copy the skills/ folder to my ~/.claude/skills/ or equivalent location.
+```
+
+### 📚 Citation Finder Workflow
+
+```
+I need to find missing citations for my thesis. Please help me:
+
+1. First, run thesis_consistency to find missing citations in my thesis
+   - Check: numbers, terminology, facts, versions, dates
+
+2. Then use paper-search-mcp (https://github.com/openags/paper-search-mcp) to find each missing paper:
+   - search_semantic(query="topic", max_results=5)
+   - search_arxiv(query="topic", max_results=5)
+   - search_google_scholar(query="topic", max_results=5)
+
+3. Finally, use thai_citation to create proper APA bibliography entries:
+   thai_citation(action="bibliography", sources=[{title, authors, year, doi, venue}])
+```
+
+### ✍️ Use Specific Skills
+
+**Start a new thesis project:**
+```
+Use the thai-thesis-writing skill to help me start a new thesis:
+- University: chiangmai (or chulalongkorn/kasetsart/kmutt/generic)
+- Author: [Your Name]
+- Title: [Thesis Title]
+- Advisor: [Advisor Name]
+- Year system: phc (พ.ศ.) or ce (ค.ศ.)
+```
+
+**Check for AI writing patterns:**
+```
+Use the thai-de-ai skill to analyze this text for AI writing patterns:
+- Language: thai (or english/both)
+- Mode: detect (or edit/rewrite)
+- Text: [paste your thesis text here]
+```
+
+**Manage citations:**
+```
+Use the thai-citation-manager skill to audit my citations:
+- Action: audit
+- Cited keys: [list citation keys found in your text]
+- Year system: phc (พ.ศ.) for Thai universities
+```
+
+**Generate ISO 29110 documents:**
+```
+Use the iso29110-docs skill to generate an ISO document:
+- Document type: project-plan (or srs/sdd/test-plan/test-record/traceability/change-request/progress/config-plan/user-manual)
+- Language: bilingual (or thai/english)
+- Project info: [your project details]
+```
+
+**Quality check before submission:**
+```
+Use the thesis-quality-gate skill to check my thesis readiness:
+- Scope: full (or chapter/iso/consistency)
+- University: chiangmai
+```
+
+### 📖 Slash Commands
+
+```
+Use these slash commands in OpenCode/Claude Code:
+
+/thesis-init --university chiangmai --author "ชื่อ นามสกุล" --title "ชื่อวิทยานิพนธ์"
+/thesis-chapter --chapter 1 --mode generate
+/thesis-audit --scope full
+/thesis-review --perspective advisor
+/thesis-deai --language thai --mode detect
+/thesis-score --chapter 1
+/thesis-format --university chiangmai
+/iso-docs --document-type srs
+```
+
+---
+
 ## What You Get
 
 ### 11 MCP Tools
