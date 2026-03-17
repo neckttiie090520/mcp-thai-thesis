@@ -634,7 +634,7 @@ mcp-thai-thesis/
 
 The system currently has profiles for 5 Thai universities. All share the same core formatting (TH Sarabun New 16pt, 1.5 line spacing, APA citations) but differ in chapter naming conventions and specific requirements. The `generic` profile works as a safe default.
 
-Adding your university is straightforward -- see [docs/10-meta/CONTRIBUTING.md](docs/10-meta/CONTRIBUTING.md).
+Adding your university is straightforward -- see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
@@ -669,7 +669,7 @@ Adding your university is straightforward -- see [docs/10-meta/CONTRIBUTING.md](
 |----------|-------------|
 | [Development Journey](docs/10-meta/DEVELOPMENT-JOURNEY.md) | How this project was built |
 | [Roadmap](docs/10-meta/ROADMAP.md) | Future development plans |
-| [Contributing](docs/10-meta/CONTRIBUTING.md) | How to contribute |
+| [Contributing](CONTRIBUTING.md) | How to contribute |
 
 ### Advanced
 
